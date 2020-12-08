@@ -1,0 +1,166 @@
+body{
+    background-color: #ffffff;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 超出一行、两行省略start */
+.over_one{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+}
+.over_two{
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* 超出两行省略end */
+
+/* 头部栏部分 */
+.header{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.header a{
+    font-size: 12px;
+    color: #898989;
+    text-decoration: none;
+}
+.header .call{
+    float: left;
+}
+.header .login{
+    float: right;
+}
+/* 头部栏部分end */
+
+/* 导航栏start */
+.nav{
+    width: 100%;
+    height: 90px;
+    font-size: 0;
+    line-height: 90px;
+    background-color: #00A0E8;
+    overflow: hidden;
+}
+.nav .logo{
+    display: inline-block;
+    width: 200px;
+    height: 46px;
+    margin-right: 120px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.nav .logo>img{
+    width: 100%;
+    height: 100%;
+}
+.nav .nav_item{
+    font-size: 16px;
+    color: #eeeeee;
+    margin-right: 65px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.nav .nav_item:last-of-type{
+    margin-right: 0;
+}
+.nav .nav_item_act{
+    position: relative;
+    color: #ffffff;
+}
+.nav .nav_item_act::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #ffffff;
+}
+/* 导航栏end */
+
+/* 底部栏部分start */
+.footer{
+    font-size: 0;
+    padding: 50px 0;
+    background-color: #D4D6D8;
+    overflow: hidden;
+}
+.footer .container>div{
+    display: inline-block;
+    vertical-align: top;
+}
+.footer .focus{
+    display: inline-block;
+    margin-right: 80px;
+}
+.footer .focus .code>div{
+    display: inline-block;
+    width: 90px;
+    margin-right: 10px;
+}
+.footer .focus .code>div:last-of-type{
+    margin-right: 0;
+}
+.footer .focus p{
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+}
+.footer .focus .title{
+    margin-bottom: 8px;
+}
+.footer .focus .code .img{
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.footer .focus .code .img>img{
+    width: 100%;
+    height: 100%;
+}
+.footer .focus .code .item>p{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2px;
+}
+.footer .link_list{
+    display: inline-block;
+    margin-right: 130px;
+    overflow: hidden;
+}
+.footer .link_list:last-of-type{
+    margin-right: 0;
+}
+.footer .link_list>a{
+    display: block;
+    font-size: 12px;
+    color: #666666;
+    text-decoration: none;
+}
+.footer .link_list .title{
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.footer .link_list .link{
+    margin-top: 12px;
+    transition: all 0.3s;
+}
+.footer .link_list .link:hover{
+    color: #ffffff;
+}
+/* 底部栏部分end */

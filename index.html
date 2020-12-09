@@ -8,10 +8,200 @@
     <title>首页</title>
     <link rel="stylesheet" href="./static/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2222614_yixpjzkagyk.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2222614_2l7ybkj92vh.css">
     <link rel="stylesheet" href="./static/common.css">
     <script src="./static/jquery-1.10.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <style>
+        .swiper {
+            width: 100%;
+            float: left;
+        }
+
+        @media screen and (max-width: 668px) {
+            .swiper{
+                background-size: auto 100%;
+            }
+        }
+
+        .swiper-container {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 668px) {
+            .swiper-container {
+                margin: 20px 0 15px;
+            }
+        }
+
+        .swiper-slide {
+            -webkit-transition: transform 1.0s;
+            -moz-transition: transform 1.0s;
+            -ms-transition: transform 1.0s;
+            -o-transition: transform 1.0s;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+
+        @media screen and (max-width: 668px) {
+            .swiper-slide {
+                -webkit-transform: scale(0.7);
+                transform: scale(0.7);
+            }
+        }
+
+        .swiper-slide-active,.swiper-slide-duplicate-active {
+            -webkit-transform: scale(0.7);
+                transform: scale(0.7);
+        }
+
+        @media screen and (max-width: 668px) {
+            .swiper-slide-active,.swiper-slide-duplicate-active {
+                -webkit-transform: scale(0.7);
+                transform: scale(0.7);
+            }
+        }
+
+        .none-effect {
+            -webkit-transition: none;
+            -moz-transition: none;
+            -ms-transition: none;
+            -o-transition: none;
+        }
+
+        .swiper-slide a {
+            background: #fff;
+            padding:10px;
+            display: block;
+            border-radius: 14px;
+        }
+
+        @media screen and (min-width: 668px) {
+            .swiper-slide a:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                box-sizing: border-box;
+                border: 10px solid #fff;
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
+        }
+
+        .swiper-slide-active a:after {
+            background: none;
+        }
+
+        @media screen and (max-width: 668px) {
+            .swiper-slide a {
+                padding: 5px;
+                border-radius: 7px;
+            }
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            border-radius: 14px;
+            display: block;
+        }
+
+        @media screen and (max-width: 668px) {
+            .swiper-slide img {
+                border-radius: 7px;
+            }
+        }
+
+        .swiper-pagination {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .swiper-pagination-bullet {
+            background: #00a0e9;
+            margin-left: 4px;
+            margin-right: 4px;
+            width: 17px;
+            height: 17px;
+            opacity: 1;
+            margin-bottom: 4px;
+        }
+
+        .swiper-pagination-bullet-active {
+            width: 13px;
+            height: 13px;
+            background: #FFF;
+            border: 6px solid #00a0e9;
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 668px) {
+            
+            .swiper-pagination {
+                position: relative;
+                margin-bottom: 20px;
+            }
+
+            .swiper-pagination-bullet {
+                background: #00a0e9;
+                margin-left: 2px;
+                margin-right: 2px;
+                width: 8px;
+                height: 8px;
+                margin-bottom: 2px;
+            }
+
+            .swiper-pagination-bullet-active {
+                width: 6px;
+                height: 6px;
+                background: #FFF;
+                border: 3px solid #00a0e9;
+                margin-bottom: 0;
+            }
+        }
+
+        .button {
+            width: 1000px;
+            margin: 0 auto;
+            bottom: 43px;
+            position: relative;
+        }
+
+        @media screen and (max-width: 668px) {
+            .button {
+                width: 70%;
+                bottom: 22px;
+            }
+        }
+
+        .button div:hover {
+            background-color: #2f4798;
+        }
+
+        .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l4.2%2C4.2L8.4%2C22l17.8%2C17.8L22%2C44L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") #00a0e9 center 50%/50% 50% no-repeat;
+        }
+
+        .swiper-button-next {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L5%2C44l-4.2-4.2L18.6%2C22L0.8%2C4.2L5%2C0z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") #00a0e9 center 50%/50% 50% no-repeat;
+        }
+
+        @media screen and (max-width: 668px) {
+            .button div {
+                width: 28px;
+                height: 28px;
+            }
+        }	
+    </style>
 </head>
 <body>
     <!-- 头部栏 -->
@@ -28,13 +218,20 @@
     <div class="nav">
         <div class="container">
             <div class="logo"><img src="http://resources.whyeai.cn/static/images/yeaipc_logo.png" alt="logo"></div>
-            <a href="" class="nav_item nav_item_act">首页</a>
-            <a href="" class="nav_item">关于我们</a>
-            <a href="" class="nav_item">产品中心</a>
-            <a href="" class="nav_item">净水案例</a>
-            <a href="" class="nav_item">行业新闻</a>
-            <a href="" class="nav_item">招商加盟</a>
-            <a href="" class="nav_item">服务中心</a>
+            <div class="nav_item nav_item_act"><a href="">首页</a></div>
+            <div class="nav_item"><a href="">关于我们</a></div>
+            <div class="nav_item"><a href="">产品中心</a></div>
+            <div class="nav_item"><a href="">净水案例</a></div>
+            <div class="nav_item"><a href="">行业新闻</a></div>
+            <div class="nav_item"><a href="">招商加盟</a></div>
+            <div class="nav_item">
+                <a href="">服务中心</a>
+                <div class="child_nav">
+                    <a href="" class="child_item">售后服务</a>
+                    <a href="" class="child_item">安装视频</a>
+                    <a href="" class="child_item">常见问题</a>
+                </div>
+            </div>
         </div>
     </div>
     <!-- banner -->
@@ -82,64 +279,77 @@
         <div class="container">
             <div class="title">我们的产品</div>
             <div class="line"></div>
-            <div class="swiper"></div>
+            <div class="swiper">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-center none-effect"><a href="#"><img src="http://resources.whyeai.cn/static/images/yeaipc_index_swiper2.png" ></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="http://resources.whyeai.cn/static/images/yeaipc_index_swiper1.png" ></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="http://resources.whyeai.cn/static/images/yeaipc_index_swiper3.png" ></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="http://resources.whyeai.cn/static/images/yeaipc_index_swiper2.png" ></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="http://resources.whyeai.cn/static/images/yeaipc_index_swiper1.png" ></a></div>
+                    </div>
+                </div>
+                <div class="button">
+            </div>
         </div>
     </div>
     <!-- 文化栏 -->
     <div class="menu">
-        <div class="item">
-            <div class="circle">
-                <i class="iconfont"></i>
+        <div class="container">
+            <div class="item">
+                <div class="circle">
+                    <i class="icon iconfont icon-wenhua"></i>
+                </div>
+                <a href="javascript:;" class="name">品牌文化</a>
             </div>
-            <a href="javascript:;" class="name">品牌文化</a>
-        </div>
-        <div class="item">
-            <div class="circle">
-                <i class="iconfont"></i>
+            <div class="item">
+                <div class="circle">
+                    <i class="icon iconfont icon-public-welfare"></i>
+                </div>
+                <a href="javascript:;" class="name">溢爱公益</a>
             </div>
-            <a href="javascript:;" class="name">溢爱公益</a>
-        </div>
-        <div class="item">
-            <div class="circle">
-                <i class="iconfont"></i>
+            <div class="item">
+                <div class="circle">
+                    <i class="icon iconfont icon-chuangxin"></i>
+                </div>
+                <a href="javascript:;" class="name">集团创新</a>
             </div>
-            <a href="javascript:;" class="name">集团创新</a>
         </div>
     </div>
     <!-- 招商加盟 -->
-    <div class="carousel">
+    <div class="bussiness">
         <div class="container">
             <div class="title">招商加盟</div>
             <div class="line"></div>
             <div class="list">
                 <div class="item">
-                    <div class="icon"><i class="icon iconfont"></i></div>
+                    <div class="icon"><i class="icon iconfont icon-tianping"></i></div>
                     <p class="name">品牌优势</p>
                     <p class="text">溢爱净水器创立于2002年帮助百万家庭改善饮水质量</p>
                 </div>
                 <div class="item">
-                    <div class="icon"><i class="icon iconfont"></i></div>
-                    <p class="name">品牌优势</p>
+                    <div class="icon"><i class="icon iconfont icon-xingjirenzheng"></i></div>
+                    <p class="name">营销优势</p>
                     <p class="text">溢爱净水器创立于2002年帮助百万家庭改善饮水质量</p>
                 </div>
                 <div class="item">
-                    <div class="icon"><i class="icon iconfont"></i></div>
-                    <p class="name">品牌优势</p>
+                    <div class="icon"><i class="icon iconfont icon-jilu"></i></div>
+                    <p class="name">技术优势</p>
                     <p class="text">溢爱净水器创立于2002年帮助百万家庭改善饮水质量</p>
                 </div>
                 <div class="item">
-                    <div class="icon"><i class="icon iconfont"></i></div>
-                    <p class="name">品牌优势</p>
+                    <div class="icon"><i class="icon iconfont icon-zhengce"></i></div>
+                    <p class="name">政策优势</p>
                     <p class="text">溢爱净水器创立于2002年帮助百万家庭改善饮水质量</p>
                 </div>
                 <div class="item">
-                    <div class="icon"><i class="icon iconfont"></i></div>
-                    <p class="name">品牌优势</p>
+                    <div class="icon"><i class="icon iconfont icon-yiliaohangyedeICON-1"></i></div>
+                    <p class="name">产品优势</p>
                     <p class="text">溢爱净水器创立于2002年帮助百万家庭改善饮水质量</p>
                 </div>
                 <div class="item">
-                    <div class="icon"><i class="icon iconfont"></i></div>
-                    <p class="name">品牌优势</p>
+                    <div class="icon"><i class="icon iconfont icon-shouye"></i></div>
+                    <p class="name">服务优势</p>
                     <p class="text">溢爱净水器创立于2002年帮助百万家庭改善饮水质量</p>
                 </div>
             </div>
@@ -153,26 +363,26 @@
             <div class="list">
                 <div class="item">
                     <div class="img"><img src="" alt=""></div>
-                    <p class="title">热烈祝贺溢爱净水斩获”2019中国健康环境“</p>
-                    <p class="text">萨比到金卡百思不得姐卡斯比还记得吧的巴萨基本加班的sad的巴萨基本Hasbro</p>
+                    <p class="title over_one">热烈祝贺溢爱净水斩获”2019中国健康环境“</p>
+                    <p class="text over_three">萨比到金卡百思不得姐卡斯比还记得吧的巴萨基本加班的sad的巴萨基本Hasbro</p>
                     <div class="line"></div>
                 </div>
                 <div class="item">
                     <div class="img"><img src="" alt=""></div>
-                    <p class="title">热烈祝贺溢爱净水斩获”2019中国健康环境“</p>
-                    <p class="text">萨比到金卡百思不得姐卡斯比还记得吧的巴萨基本加班的sad的巴萨基本Hasbro</p>
+                    <p class="title over_one">热烈祝贺溢爱净水斩获”2019中国健康环境“</p>
+                    <p class="text over_three">萨比到金卡百思不得姐卡斯比还记得吧的巴萨基本加班的sad的巴萨基本Hasbro</p>
                     <div class="line"></div>
                 </div>
                 <div class="item">
                     <div class="img"><img src="" alt=""></div>
-                    <p class="title">热烈祝贺溢爱净水斩获”2019中国健康环境“</p>
-                    <p class="text">萨比到金卡百思不得姐卡斯比还记得吧的巴萨基本加班的sad的巴萨基本Hasbro</p>
+                    <p class="title over_one">热烈祝贺溢爱净水斩获”2019中国健康环境“</p>
+                    <p class="text over_three">萨比到金卡百思不得姐卡斯比还记得吧的巴萨基本加班的sad的巴萨基本Hasbro</p>
                     <div class="line"></div>
                 </div>
                 <div class="item">
                     <div class="img"><img src="" alt=""></div>
-                    <p class="title">热烈祝贺溢爱净水斩获”2019中国健康环境“</p>
-                    <p class="text">萨比到金卡百思不得姐卡斯比还记得吧的巴萨基本加班的sad的巴萨基本Hasbro</p>
+                    <p class="title over_one">热烈祝贺溢爱净水斩获”2019中国健康环境“</p>
+                    <p class="text over_three">萨比到金卡百思不得姐卡斯比还记得吧的巴萨基本加班的sad的巴萨基本Hasbro</p>
                     <div class="line"></div>
                 </div>
             </div>
@@ -224,6 +434,28 @@
     </div>
 </body>
 <script type="text/javascript">
+    $(function(){
+        var swiper = new Swiper('.swiper-container',{
+            // autoplay:3000,
+            speed:1000,
+            autoplayDisableOnInteraction : false,
+            loop:true,
+            centeredSlides : true,
+            slidesPerView:2,
+            pagination : '.swiper-pagination',
+            paginationClickable:true,
+            prevButton:'.swiper-button-prev',
+            nextButton:'.swiper-button-next',
+            onInit:function(swiper){
+                swiper.slides[2].className="swiper-slide swiper-slide-active";//第一次打开不要动画
+                },
+            breakpoints: { 
+                668: {
+                    slidesPerView: 1,
+                }
+            }
+        });
+    })
 </script>
 <style>
     /* banner部分start */
@@ -363,5 +595,192 @@
         background-color: #00A0E8;
     }
     /* 产品轮播end */
+
+    /* 文化栏目start */
+    .menu{
+        padding: 50px 0;
+    }
+    .menu .container{
+        text-align: center;
+    }
+    .menu .container .item{
+        display: inline-block;
+        margin: 0 80px;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .menu .item .circle{
+        width: 173px;
+        height: 173px;
+        font-size: 50px;
+        color: #00A0E8;
+        text-align: center;
+        line-height: 173px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .menu .item .circle>i{
+        font-size: 50px;
+    }
+    .menu .item .name{
+        display: inline-block;
+        font-size: 18px;
+        color: #323232;
+        text-decoration: none;
+        margin: 50px auto 0;
+        padding: 10px 0;
+        border-bottom: 2px solid #BBBBBB;
+    }
+    .menu .item:hover .circle{
+        color: #ffffff;
+        background-color: #00A0E8;
+        transition: all 0.3s;
+    }
+    .menu .item:hover .name{
+        border-color: #00A0E8;
+        transition: all 0.3s;
+    }
+    .menu .item_act .circle{
+        color: #ffffff;
+        background-color: #00A0E8;
+    }
+    .menu .item_act .name{
+        border-color: #00A0E8;
+    }
+    /* 文化栏目end */
+
+    /* 招商加盟start */
+    .bussiness{
+        padding: 50px 0;
+    }
+    .bussiness .title{
+        font-size: 20px;
+        color: #333333;
+        text-align: center;
+    }
+    .bussiness .line{
+        width: 44px;
+        height: 1px;
+        margin: 10px auto 40px;
+        background-color: #00A0E8;
+    }
+    .bussiness .list{
+        text-align: center;
+    }
+    .bussiness .list .item{
+        box-sizing: border-box;
+        display: inline-block;
+        width: 262px;
+        height: 273px;
+        margin: 20px;
+        border: 1px solid #eeeeee;
+    }
+    .bussiness .item .icon{
+        margin: 60px auto 0;
+    }
+    .bussiness .item .icon>i{
+        font-size: 52px;
+        color: #333333;
+    }
+    .bussiness .item .name{
+        font-size: 18px;
+        color: #333333;
+        padding: 0;
+        margin:10px 0;
+    }
+    .bussiness .item .text{
+        font-size: 16px;
+        color: #666666;
+        line-height: 1.3;
+        padding: 0 20px;
+        margin: 0;
+    }
+    .bussiness .item:hover{
+        color: #ffffff;
+        background-color: #00A0E8;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .bussiness .item:hover p{
+        color: #ffffff;
+        transition: all 0.3s;
+    }
+    .bussiness .item:hover .icon i{
+        color: #ffffff;
+        transition: all 0.3s;
+    }
+    /* 招商加盟end */
+
+    /* 行业新闻start */
+    .news{
+        font-size: 0;
+        padding: 50px 0;
+    }
+    .news .container>.title{
+        font-size: 20px;
+        color: #333333;
+        text-align: center;
+    }
+    .news .container>.line{
+        width: 44px;
+        height: 1px;
+        margin: 10px auto 40px;
+        background-color: #00A0E8;
+    }
+    .news .list{
+        text-align: center;
+    }
+    .news .list .item{
+        display: inline-block;
+        width: 280px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .news .item .img{
+        width: 280px;
+        height: 180px;
+        background-color: #00A0E8;
+    }
+    .news .item .title{
+        font-size: 13px;
+        color: #161616;
+        margin: 10px 0;
+        padding: 0;
+        text-align: left;
+    }
+    .news .item .text{
+        font-size: 12px;
+        color: #999999;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+    .news .item .line{
+        width: 50px;
+        height: 2px;
+        margin-top: 10px;
+        background-color: #999999;
+    }
+    .news .item:hover .line{
+        background-color: #00A0E8;
+        transition: all 0.3s;
+    }
+    .news .more{
+        box-sizing: border-box;
+        width: 121px;
+        height: 32px;
+        font-size: 16px;
+        color: #00A0E8;
+        text-align: center;
+        line-height: 32px;
+        margin: 50px auto 0;
+        border-radius: 16px;
+        border: 1px solid #00A0E8;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    /* 行业新闻end */
 </style>
 </html>

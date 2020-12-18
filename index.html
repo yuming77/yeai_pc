@@ -286,9 +286,30 @@
             <div class="swiper">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide-center none-effect"><a href="#"><img src="http://resources.whyeai.cn/static/images/yeaipc_index_swiper2.png" ></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="http://resources.whyeai.cn/static/images/yeaipc_index_swiper1.png" ></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="http://resources.whyeai.cn/static/images/yeaipc_index_swiper3.png" ></a></div>
+                        <div class="swiper-slide swiper-slide-center none-effect">
+                            <a href="#"><img src="http://resources.whyeai.cn/static/images/yeaipc_index_swiper2.png" ></a>
+                            <div class="cover">
+                                <p class="name">物联网智饮机</p>
+                                <p class="type">YE-RO-1366</p>
+                                <P class="intro">智能物联 无桶设计</P>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="http://resources.whyeai.cn/static/images/yeaipc_index_swiper1.png" ></a>
+                            <div class="cover">
+                                <p class="name">物联网智饮机</p>
+                                <p class="type">YE-RO-1366</p>
+                                <P class="intro">智能物联 无桶设计</P>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="http://resources.whyeai.cn/static/images/yeaipc_index_swiper3.png" ></a>
+                            <div class="cover">
+                                <p class="name">物联网智饮机</p>
+                                <p class="type">YE-RO-1366</p>
+                                <P class="intro">智能物联 无桶设计</P>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -785,5 +806,52 @@
         cursor: pointer;
     }
     /* 行业新闻end */
+
+    .swiper-slide{
+        position: relative;
+    }
+    .swiper-slide .cover{
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .3);
+        border: 10px solid #ffffff;
+        border-radius: 24px;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+    .swiper-slide .cover:hover{
+        opacity: 1;
+    }
+    .swiper-slide .cover p{
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-slide .cover .name{
+        font-size: 40px;
+        font-weight: 600;
+        color: #ffffff;
+        text-align:center;
+        margin-top: 140px;
+    }
+    .swiper-slide .cover .type{
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+        text-align:center;
+        margin-top: 10px;
+    }
+    .swiper-slide .cover .intro{
+        font-size: 24px;
+        font-weight: 500;
+        color: #ffffff;
+        text-align:center;
+        margin-top: 20px;
+    }
 </style>
 </html>
